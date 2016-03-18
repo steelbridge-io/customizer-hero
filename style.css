@@ -51,7 +51,7 @@ body {
   padding: 12px;
   max-width: 192px; }
 
-@media (min-width: 496px) {
+@media (min-width: 502px) {
   .hero-content {
     padding: 24px;
     flex: 1 1 50%;
