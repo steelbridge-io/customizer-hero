@@ -33,7 +33,7 @@ class Hero_Customize
       'type' => 'text'
     ));
     
-    // Add setting & control for hero subtitle
+    // Add setting & control for hero description
     $wp_customize->add_setting( 'hero_description', array(
       'default' => 'Using the Wordpress Customizer you can make updates to parts of your website with a live preview. This makes it easy to iterate on changes.',
       'transport' => $transport
