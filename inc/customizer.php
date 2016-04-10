@@ -34,15 +34,15 @@ class Hero_Customize
     ));
     
     // Add setting & control for hero subtitle
-    $wp_customize->add_setting( 'hero_subtitle', array(
+    $wp_customize->add_setting( 'hero_description', array(
       'default' => 'Using the Wordpress Customizer you can make updates to parts of your website with a live preview. This makes it easy to iterate on changes.',
       'transport' => $transport
     ));
     
-    $wp_customize->add_control( 'hero_subtitle', array(
-      'label' => 'Subtitle',
+    $wp_customize->add_control( 'hero_description', array(
+      'label' => 'Description',
       'section' => 'hero',
-      'settings' => 'hero_subtitle',
+      'settings' => 'hero_description',
       'type' => 'textarea'
     ));
     
@@ -120,11 +120,11 @@ class Hero_Customize
     ) );
     
     // Description
-    $wp_customize->selective_refresh->add_partial('hero_subtitle', array(
-      'selector' => '.hero-subtitle',
-      'settings' => 'hero_subtitle',
+    $wp_customize->selective_refresh->add_partial('hero_description', array(
+      'selector' => '.hero-description',
+      'settings' => 'hero_description',
       'render_callback' => function() {
-        return get_theme_mod('hero_subtitle');
+        return get_theme_mod('hero_description');
       }
     ) );
     
