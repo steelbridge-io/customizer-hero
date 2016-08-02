@@ -13,7 +13,7 @@ class Hero_Customize
   public static function register($wp_customize)
   { 
     $transport = ( $wp_customize->selective_refresh ? 'postMessage' : 'refresh' );
-    
+
     // Add hero section
     $wp_customize->add_section( 'hero', array(
       'title' => 'Hero',
@@ -140,7 +140,7 @@ class Hero_Customize
       'selector' => '#hero-css',
       'settings' => 'hero_background_color',
       'render_callback' => function() {
-        self::css('.hero', 'background-color', 'hero_background_color');
+        echo self::css('.hero', 'background-color', 'hero_background_color');
       }
     ) );
     
